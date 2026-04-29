@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sara! 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Satisfy&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Floating decorations -->
+  <div class="bg-decorations" aria-hidden="true">
+    <span class="deco deco-1">🌸</span>
+    <span class="deco deco-2">💐</span>
+    <span class="deco deco-3">🌷</span>
+    <span class="deco deco-4">🌸</span>
+    <span class="deco deco-5">🌺</span>
+    <span class="deco deco-6">💐</span>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="pre-title">✨ a very special day ✨</p>
+      <h1 class="main-title">Happy 19<sup>th</sup> Birthday<br><span class="name-highlight">Sara!</span></h1>
+      <p class="date-stamp">May the 4<sup>th</sup></p>
+    </div>
+    <div class="scroll-hint">scroll down ↓</div>
+  </section>
+
+  <!-- ══ NEWSPAPER ══ -->
+  <section class="newspaper">
+    <div class="newspaper-inner">
+      <div class="paper-header">
+        <div class="paper-rule"></div>
+        <div class="paper-name">The Birthday Gazette</div>
+        <div class="paper-meta">
+          <span>Vol. XIX</span>
+          <span>May 4, 2025</span>
+          <span>Special Edition</span>
+        </div>
+        <div class="paper-rule"></div>
+      </div>
+
+      <h2 class="headline">Florida Woman Stole<br>a Polish Man's Heart</h2>
+      <p class="subheadline">Authorities baffled. Victim reportedly smiling.</p>
+
+      <div class="paper-columns">
+        <!-- Victim -->
+        <div class="person-card victim">
+          <div class="photo-frame">
+            <img src="images/me.jpg" alt="The Victim" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="photo-placeholder">
+              <span>📸</span>
+              <small>replace with<br>me.jpg</small>
+            </div>
+          </div>
+          <div class="person-label">
+            <span class="label-tag victim-tag">THE VICTIM</span>
+            <p class="person-desc">A young Polish man, last seen walking around with a suspicious smile. Claims he has no idea how it happened.</p>
+          </div>
+        </div>
+
+        <div class="vs-divider">
+          <span>vs.</span>
+        </div>
+
+        <!-- Culprit -->
+        <div class="person-card culprit">
+          <div class="photo-frame">
+            <img src="images/sara.jpg" alt="The Culprit" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="photo-placeholder">
+              <span>📸</span>
+              <small>replace with<br>sara.jpg</small>
+            </div>
+          </div>
+          <div class="person-label">
+            <span class="label-tag culprit-tag">THE PERPETRATOR</span>
+            <p class="person-desc">A Florida woman, armed with a smile that should probably be regulated. Known to cause irreversible damage to hearts.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="paper-footer-note"><em>"She didn't even try to hide it,"</em> said one witness. <em>"She just showed up and boom — gone."</em></p>
+    </div>
+  </section>
+
+  <!-- ══ MINIGAME ══ -->
+  <section class="game-section">
+    <div class="game-inner">
+      <div class="game-header">
+        <h2 class="game-title">Catch the Hearts 💕</h2>
+        <p class="game-subtitle">Catch hearts to unlock special rewards. Ready?</p>
+        <div class="rewards-preview">
+          <div class="reward-item" id="reward-5">
+            <span class="reward-icon">😳</span>
+            <span class="reward-count">5 ❤️</span>
+            <span class="reward-label">Embarrassing photo of me</span>
+          </div>
+          <div class="reward-item" id="reward-15">
+            <span class="reward-icon">🤫</span>
+            <span class="reward-count">15 ❤️</span>
+            <span class="reward-label">Ask me 3 honest questions</span>
+          </div>
+          <div class="reward-item" id="reward-30">
+            <span class="reward-icon">🎫</span>
+            <span class="reward-count">30 ❤️</span>
+            <span class="reward-label">Golden Ticket</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Score bar -->
+      <div class="score-bar">
+        <div class="score-display">
+          <span class="score-label">Hearts caught:</span>
+          <span class="score-value" id="score">0</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+          <div class="progress-markers">
+            <span style="left: calc(5/30 * 100%)">5</span>
+            <span style="left: calc(15/30 * 100%)">15</span>
+            <span style="left: calc(30/30 * 100% - 12px)">30</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game canvas -->
+      <div class="game-arena" id="game-arena">
+        <div class="game-start-overlay" id="start-overlay">
+          <button class="start-btn" id="start-btn">Start Game ♥</button>
+        </div>
+        <div class="basket" id="basket">🧺</div>
+      </div>
+
+      <p class="game-hint">Move your cursor (or finger) to catch hearts in the basket!</p>
+
+      <!-- Reward panels (hidden until unlocked) -->
+      <div class="reward-panel hidden" id="panel-5">
+        <div class="panel-inner">
+          <h3>😳 You unlocked the embarrassing photo!</h3>
+          <div class="embarrassing-photo-frame">
+            <img src="images/embarrassing.jpg" alt="lol" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="photo-placeholder large">
+              <span>😂</span>
+              <small>replace with<br>embarrassing.jpg</small>
+            </div>
+          </div>
+          <p class="panel-note">You're welcome / I'm sorry.</p>
+        </div>
+      </div>
+
+      <div class="reward-panel hidden" id="panel-15">
+        <div class="panel-inner">
+          <h3>🤫 3 Honest Questions Unlocked!</h3>
+          <p>You may now ask me <strong>3 questions</strong> and I have to answer 100% truthfully. No dodging, no changing the subject. You have my word.</p>
+          <p class="panel-note">Use them wisely. Or unwisely. Your call. 😬</p>
+        </div>
+      </div>
+
+      <div class="reward-panel hidden" id="panel-30">
+        <div class="panel-inner">
+          <h3>🎫 GOLDEN TICKET UNLOCKED!</h3>
+          <p>You've caught all 30 hearts. That means you've earned the ultimate prize.</p>
+          <button class="download-ticket-btn" id="download-ticket">Download Your Golden Ticket ✨</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <p>Made with ♥ &nbsp;·&nbsp; Happy Birthday Sara 🎂</p>
+  </footer>
+
+  <!-- Hidden ticket template for PDF generation -->
+  <div id="ticket-template" style="display:none;">
+    <div id="ticket-render">
+      <div class="ticket-border">
+        <div class="ticket-top">
+          <div class="ticket-logo">✦</div>
+          <h1 class="ticket-title">Golden Ticket</h1>
+          <div class="ticket-logo">✦</div>
+        </div>
+        <div class="ticket-divider"></div>
+        <p class="ticket-body">
+          This ticket entitles <strong>Sara</strong> to one favour of her choosing —
+          no matter what it is, no questions asked.
+          The bearer may redeem this at any time.
+        </p>
+        <div class="ticket-divider"></div>
+        <div class="ticket-bottom">
+          <span class="ticket-validity">Valid: forever ♾</span>
+          <span class="ticket-sig">— signed with love</span>
+        </div>
+        <div class="ticket-hearts">♥ ♥ ♥</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/ticket.js"></script>
+</body>
+</html>
