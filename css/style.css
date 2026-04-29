@@ -587,9 +587,9 @@ body {
 }
 
 .embarrassing-photo-frame {
-  width: 260px;
+  width: 300px;
   max-width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 2/3;
   border: 3px solid var(--pink-light);
   background: var(--pink-blush);
   margin: 1rem auto;
