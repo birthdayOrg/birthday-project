@@ -416,7 +416,7 @@ body {
   font-family: var(--font-display);
 }
 .score-label { font-size: 0.85rem; color: var(--ink-soft); }
-.score-value { font-size: 1.1rem; font-weight: 700; color: var(--pink-deep); }
+.score-value { font-size: 1.1rem; font-weight: 700; color: var(--pink-deep); padding: 10px; }
 
 .progress-track {
   height: 12px;
